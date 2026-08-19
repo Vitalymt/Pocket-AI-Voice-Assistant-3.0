@@ -17,7 +17,7 @@ Compared to [v1](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant) and [v2]
 - **Magnetic charging** — pogo pins replace dual USB-C connectors. Like wireless earbuds: drop it on the charger and it charges
 - **43x43mm body** — thinner, fewer holes (only the speaker opening)
 - **Better speaker** — cleaner sound, louder voice output
-- **Smart sleep** — screen off after 10 seconds, deep sleep after 1 minute. Wakes on touch
+- **Smart sleep** — screen off after 2 minutes, deep sleep after 5 minutes. Wakes on touch
 - **Web search** — Tavily API, searches the internet and responds with voice
 - **OTA updates** — firmware updates over the air, no cables needed
 
@@ -40,8 +40,8 @@ Compared to [v1](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant) and [v2]
 2. **Speak** — the microphone records your voice
 3. **Think** — speech goes to the cloud, AI processes it
 4. **Respond** — the speaker plays the answer
-5. **Silent for 10 seconds** — screen turns off
-6. **Silent for 1 minute** — deep sleep, wakes on touch
+5. **Silent for 2 minutes** — screen turns off
+6. **Silent for 5 minutes** — deep sleep, wakes on touch
 
 ## Components
 
