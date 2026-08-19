@@ -1,88 +1,88 @@
 # Pocket AI Voice Assistant 3.0
 
-**Карманный AI-ассистент. Говори — он ответит.**
+**Pocket-sized AI assistant. Speak — it responds.**
 
-Маленький робот из будущего, который помещается в ладони. ESP32-S3, 1.3" OLED-дисплей, магнитная зарядка, ни одной физической кнопки.
+A tiny robot from the future that fits in your palm. ESP32-S3, 1.3" OLED display, magnetic charging, zero physical buttons.
 
 <img src="assets/bips-v3.jpg" width="400"/>
 
 ---
 
-## Что нового в v3.0
+## What's New in v3.0
 
-По сравнению с [v1](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant) и [v2](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant-2.0):
+Compared to [v1](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant) and [v2](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant-2.0):
 
-- **Экран больше** — 1.3" SH1106 OLED (был 0.96" SSD1306)
-- **Ноль физических кнопок** — touch-кнопка спрятана внутри корпуса, реагирует на касание через пластик. Она же кнопка «говорить» и «пробудить из сна»
-- **Магнитная зарядка** — pogo pins вместо двух разъёмов USB-C. Как в беспроводных наушниках: положил — заряжается
-- **Корпус 43x43 мм** — стал тоньше, отверстий стало меньше (только для динамика)
-- **Лучший динамик** — чище звук, громче голос ассистента
-- **Умный сон** — экран гаснет через 10 секунд, через минуту — глубокий сон. Будится касанием
-- **Веб-поиск** — Tavily API, ищет в интернете и отвечает голосом
-- **OTA-обновления** — прошивка обновляется по воздуху, без проводов
+- **Bigger screen** — 1.3" SH1106 OLED (was 0.96" SSD1306)
+- **Zero physical buttons** — capacitive touch button hidden inside the case, responds to touch through the plastic. Acts as both "speak" and "wake from sleep"
+- **Magnetic charging** — pogo pins replace dual USB-C connectors. Like wireless earbuds: drop it on the charger and it charges
+- **43x43mm body** — thinner, fewer holes (only the speaker opening)
+- **Better speaker** — cleaner sound, louder voice output
+- **Smart sleep** — screen off after 10 seconds, deep sleep after 1 minute. Wakes on touch
+- **Web search** — Tavily API, searches the internet and responds with voice
+- **OTA updates** — firmware updates over the air, no cables needed
 
-## Характеристики
+## Specs
 
-- **Мозг:** ESP32-S3 N16R8 (16MB flash, 8MB PSRAM)
-- **Плата:** XH-S3E-AI V1.0 (аудиоусилитель встроен)
-- **Экран:** SH1106 1.3" OLED, 128x64, I2C
-- **Аудио:** I2S, 16kHz, динамик + микрофон
-- **Корпус:** 43x43 мм, тонкий, минимум отверстий
-- **Кнопка:** емкостная TTP223 внутри корпуса (touch через пластик)
-- **Зарядка:** магнитная через pogo pins
-- **Аккумулятор:** LiPo
+- **Brain:** ESP32-S3 N16R8 (16MB flash, 8MB PSRAM)
+- **Board:** XH-S3E-AI V1.0 (audio amplifier built-in)
+- **Display:** SH1106 1.3" OLED, 128x64, I2C
+- **Audio:** I2S, 16kHz, speaker + microphone
+- **Body:** 43x43mm, thin, minimal openings
+- **Button:** capacitive TTP223 inside the case (touch through plastic)
+- **Charging:** magnetic via pogo pins
+- **Battery:** LiPo
 - **Wi-Fi:** 802.11 b/g/n
-- **Язык:** русский
+- **Language:** Russian
 
-## Как работает
+## How It Works
 
-1. **Касание** — устройство просыпается
-2. **Говоришь** — микрофон записывает голос
-3. **Думает** — речь уходит в облако, AI обрабатывает
-4. **Отвечает** — динамик озвучивает ответ
-5. **Молчишь 10 секунд** — экран гаснет
-6. **Молчишь минуту** — глубокий сон, будится касанием
+1. **Touch** — the device wakes up
+2. **Speak** — the microphone records your voice
+3. **Think** — speech goes to the cloud, AI processes it
+4. **Respond** — the speaker plays the answer
+5. **Silent for 10 seconds** — screen turns off
+6. **Silent for 1 minute** — deep sleep, wakes on touch
 
-## Компоненты
+## Components
 
-- **Плата:** XH-S3E-AI V1.0 (ESP32-S3 N16R8 + встроенный аудиоусилитель)
-- **Дисплей:** SH1106 1.3" OLED (I2C, 128x64)
-- **Микрофон:** INMP441 (I2S)
-- **Кнопка:** TTP223 (емкостная, внутри корпуса)
-- **Аккумулятор:** LiPo
-- **Зарядка:** магнитная, pogo pins
+- **Board:** XH-S3E-AI V1.0 (ESP32-S3 N16R8 + built-in audio amplifier)
+- **Display:** SH1106 1.3" OLED (I2C, 128x64)
+- **Microphone:** INMP441 (I2S)
+- **Button:** TTP223 (capacitive, inside the case)
+- **Battery:** LiPo
+- **Charging:** magnetic, pogo pins
 
-## Распиновка
+## Pinout
 
-**Дисплей SH1106:**
-- SDA - GPIO41
-- SCL - GPIO42
+**Display SH1106:**
+- SDA — GPIO41
+- SCL — GPIO42
 
-**Динамик (I2S, встроен в плату):**
-- DOUT - GPIO7
-- BCLK - GPIO15
-- LRCK - GPIO16
+**Speaker (I2S, built into board):**
+- DOUT — GPIO7
+- BCLK — GPIO15
+- LRCK — GPIO16
 
-**Микрофон INMP441:**
-- SCK - GPIO5
-- WS - GPIO4
-- DIN - GPIO6
+**Microphone INMP441:**
+- SCK — GPIO5
+- WS — GPIO4
+- DIN — GPIO6
 
-**Touch кнопка TTP223:**
-- SIG - GPIO43
+**Touch button TTP223:**
+- SIG — GPIO43
 
-**Кнопки громкости:**
-- VOL+ - GPIO40
-- VOL- - GPIO39
+**Volume buttons:**
+- VOL+ — GPIO40
+- VOL- — GPIO39
 
-**Светодиод:** GPIO48
+**LED:** GPIO48
 
-## Поколения
+## Generations
 
-- [v1](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant) - первое поколение, 0.96" OLED, два USB-C, физический тумблер
-- [v2](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant-2.0) - прозрачный корпус, touch кнопка, 4 LED индикатора
-- **v3** - вы здесь. 1.3" OLED, магнитная зарядка, ноль физических кнопок
+- [v1](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant) — first generation, 0.96" OLED, dual USB-C, physical toggle switch
+- [v2](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant-2.0) — transparent case, touch button, 4 LED battery indicator
+- **v3** — you are here. 1.3" OLED, magnetic charging, zero physical buttons
 
-## Контакты
+## Contact
 
 - Telegram: [@hitdata](https://t.me/hitdata)
