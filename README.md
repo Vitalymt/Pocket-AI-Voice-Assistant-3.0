@@ -85,6 +85,8 @@ LED: GPIO48
 
 ## Firmware
 
+> **Alpha version.** The firmware is experimental and may be unstable. Use at your own risk.
+
 The firmware is based on [Xiaozhi ESP32](https://github.com/78/xiaozhi-esp32) — an open-source platform for building AI voice assistants on ESP32 hardware. Without Xiaozhi, the device would not function.
 
 
