@@ -87,7 +87,6 @@ LED: GPIO48
 
 The firmware is based on [Xiaozhi ESP32](https://github.com/78/xiaozhi-esp32) — an open-source platform for building AI voice assistants on ESP32 hardware. Without Xiaozhi, the device would not function.
 
-Custom firmware source: [bips-firmware](https://github.com/Vitalymt/bips-firmware) (branch `bips-v3`)
 
 ### OTA Updates
 
@@ -120,13 +119,11 @@ Boot → downloads ota.json → compares version → if newer → updates
 ## Links
 
 - [Xiaozhi ESP32](https://github.com/78/xiaozhi-esp32) — base firmware (open-source)
-- [bips-firmware](https://github.com/Vitalymt/bips-firmware) — custom firmware source
 - [ESP-IDF](https://github.com/espressif/esp-idf) — build framework
 
 ## Contact
 
 - Telegram: [@hitdata](https://t.me/hitdata)
-- Avito: Виталий и Екатерина
 
 ## License
 
