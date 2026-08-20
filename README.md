@@ -1,10 +1,12 @@
 # Pocket AI Voice Assistant 3.0
 
-**Pocket-sized AI assistant. Speak — it responds.**
+A tiny companion from the future that lives on your desk.
 
-A tiny robot from the future that fits in your palm. ESP32-S3, 1.3" OLED display, magnetic charging, zero physical buttons.
+BIPS is not just a gadget — it's a little friend you actually want to talk to. It reminds you to take a break, drink water, and step away from the screen. You speak, it responds. It searches the internet, remembers facts, and shows its mood on a tiny OLED screen. Put it on your desk and watch colleagues stop by, touch it, ask questions, and smile.
 
-<img src="assets/bips-v3.jpg" width="400"/>
+No subscriptions. No token limits. No "upgrade to premium" popups. Connects to Wi-Fi once and forgets about it. Remembers up to 10 networks, so you can take it outside on a mobile hotspot. Choose a voice, set a personality — make it yours.
+
+The semi-transparent case is not just for looks. It's a statement: this is what AI looks like when it becomes something you can hold, turn around, and see how it works inside.
 
 ---
 
@@ -34,15 +36,6 @@ Compared to [v1](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant) and [v2]
 - **Wi-Fi:** 802.11 b/g/n
 - **Language:** Russian
 
-## How It Works
-
-1. **Touch** — the device wakes up
-2. **Speak** — the microphone records your voice
-3. **Think** — speech goes to the cloud, AI processes it
-4. **Respond** — the speaker plays the answer
-5. **Silent for 2 minutes** — screen turns off
-6. **Silent for 5 minutes** — deep sleep, wakes on touch
-
 ## Components
 
 - **Board:** XH-S3E-AI V1.0 (ESP32-S3 N16R8 + built-in audio amplifier)
@@ -54,28 +47,67 @@ Compared to [v1](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant) and [v2]
 
 ## Pinout
 
-**Display SH1106:**
-- SDA — GPIO41
-- SCL — GPIO42
+```
+Display SH1106:
+  SDA  → GPIO41
+  SCL  → GPIO42
 
-**Speaker (I2S, built into board):**
-- DOUT — GPIO7
-- BCLK — GPIO15
-- LRCK — GPIO16
+Speaker (I2S, built into board):
+  DOUT → GPIO7
+  BCLK → GPIO15
+  LRCK → GPIO16
 
-**Microphone INMP441:**
-- SCK — GPIO5
-- WS — GPIO4
-- DIN — GPIO6
+Microphone INMP441:
+  SCK  → GPIO5
+  WS   → GPIO4
+  DIN  → GPIO6
 
-**Touch button TTP223:**
-- SIG — GPIO43
+Touch button TTP223:
+  SIG  → GPIO43
 
-**Volume buttons:**
-- VOL+ — GPIO40
-- VOL- — GPIO39
+Volume buttons:
+  VOL+ → GPIO40
+  VOL- → GPIO39
 
-**LED:** GPIO48
+LED: GPIO48
+```
+
+## How It Works
+
+1. **Touch** — the device wakes up, shows eyes on the screen
+2. **Speak** — the eyes become "listening", microphone records your voice
+3. **Think** — speech goes to the cloud, AI processes it
+4. **Respond** — the eyes "speak", the speaker plays the answer
+5. **Silent for 2 minutes** — screen turns off
+6. **Silent for 5 minutes** — deep sleep, wakes on touch
+
+## Firmware
+
+The firmware is based on [Xiaozhi ESP32](https://github.com/78/xiaozhi-esp32) — an open-source platform for building AI voice assistants on ESP32 hardware. Without Xiaozhi, the device would not function.
+
+Custom firmware source: [bips-firmware](https://github.com/Vitalymt/bips-firmware) (branch `bips-v3`)
+
+### OTA Updates
+
+The device checks for updates on every boot:
+
+```
+Boot → downloads ota.json → compares version → if newer → updates
+```
+
+## Gallery
+
+![BIPS v3 in hand outdoors](photos/bips-v3-in-hand.jpg)
+
+*BIPS v3 — fits in your palm, magnetic charging contacts visible*
+
+![BIPS v3 near window](photos/bips-v3-window.jpg)
+
+*Speaker holes and matte black finish*
+
+![BIPS v3 cube design](photos/bips-v3-cube.jpg)
+
+*Compact cube form factor, 43x43mm*
 
 ## Generations
 
@@ -83,6 +115,17 @@ Compared to [v1](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant) and [v2]
 - [v2](https://github.com/Vitalymt/Pocket-AI-Voice-Assistant-2.0) — transparent case, touch button, 4 LED battery indicator
 - **v3** — you are here. 1.3" OLED, magnetic charging, zero physical buttons
 
+## Links
+
+- [Xiaozhi ESP32](https://github.com/78/xiaozhi-esp32) — base firmware (open-source)
+- [bips-firmware](https://github.com/Vitalymt/bips-firmware) — custom firmware source
+- [ESP-IDF](https://github.com/espressif/esp-idf) — build framework
+
 ## Contact
 
 - Telegram: [@hitdata](https://t.me/hitdata)
+- Avito: Виталий и Екатерина
+
+## License
+
+Proprietary. All rights reserved.
