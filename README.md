@@ -8,6 +8,8 @@ No subscriptions. No token limits. No "upgrade to premium" popups. Connects to W
 
 The semi-transparent case is not just for looks. It's a statement: this is what AI looks like when it becomes something you can hold, turn around, and see how it works inside.
 
+![BIPS v3](assets/bips-v3.jpg)
+
 ---
 
 ## What's New in v3.0
